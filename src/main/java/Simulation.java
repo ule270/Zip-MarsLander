@@ -53,10 +53,12 @@ public class Simulation {
         int burnInterval = 0;
         printString(gameHeader());
         printString(getHeader());
+        OnBoardComputer comp = new OnBoardComputer();
         while (vehicle.stillFlying()) {
             status = vehicle.getStatus(burnInterval);
             System.out.print(status.toString()+"\t\t");
-            vehicle.adjustForBurn(burnSource.getNextBurn(status));
+//            vehicle.adjustForBurn(burnSource.getNextBurn(status));
+            vehicle.adjustForBurn(comp.getNextBurn(status));
             if (vehicle.outOfFuel()) {
                 break;
             }

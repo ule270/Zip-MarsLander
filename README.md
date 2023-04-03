@@ -103,9 +103,9 @@ Now, the hard part of this lab, is
 __how do you create a class that gets DescentEvent objects as telemetry,
 and computes a new burn that lets the Starship land safely?__
 
-This class, called `OnBoardComputer`, you need to take in the status object 
-(Descent Event) which tells you the status of the vehicle. 
-Then, you make a make a burn recommendation.
+This class, called `OnBoardComputer`, you need to take in the status object
+(Descent Event) which tells you the status of the vehicle.
+Then, you make a burn recommendation.
 And you keep doing that until the Starship lands softly.
 
 The math is not hard. 
@@ -127,7 +127,8 @@ Burn is in kilos, the DeltaV (change in velocity) is in m/s
 |95|+5|
 |50|+50|
 
-So if you need to land at 2 m/s, you need a way to slow down alot, and do it very close to the martian surface.
+So if you need to land at 2 m/s, you need a way to slow down a lot, and do it very close 
+to the martian surface.
 
 Maybe the way to do this is to descend from your initial altitude until you're at about 
 1000m and moving at 100m/s, then descend to 200m at 100 m/s, and then descend to 50m at 25m/s.
@@ -138,7 +139,7 @@ You may need to dig up some high school physics to figure this out.
 
 Hint: `a = (speed * speed)/(2 * altitude)`
 
-And remember, you brun zero kilos of fuel to increase descent speed by 100 m/s.
+And remember, you burn zero kilos of fuel to increase descent speed by 100 m/s.
 You burn 100 kilos of fuel to maintain your current descent speed.
 You Burn 200 kilos of fuel to reduce you descent speed by 100 m/s.
 
